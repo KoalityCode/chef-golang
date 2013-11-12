@@ -1,0 +1,8 @@
+languages:
+  ruby: 1.9.3
+setup:
+- scripts:
+  - bundle install --gemfile test/support/Gemfile
+test:
+  scripts:
+  - bundle exec rake foodcritic
