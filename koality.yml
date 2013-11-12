@@ -1,0 +1,12 @@
+languages:
+  ruby: 1.9.3
+setup:
+- packages:
+  - system:
+    - libxslt-dev
+    - libxml2-dev
+- scripts:
+  - bundle install --gemfile test/support/Gemfile
+test:
+  scripts:
+  - BUNDLE_GEMFILE=test/support/Gemfile bundle exec rake foodcritic
